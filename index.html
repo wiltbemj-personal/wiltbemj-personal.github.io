@@ -21,7 +21,7 @@
   <div class="grid" id="repo-grid">Loading repositories...</div>
 
   <script>
-    const username = '<username>'; // <-- Replace with your GitHub username
+    const username = 'wiltbemj-personal';
 
     async function loadRepos() {
       try {
@@ -31,7 +31,7 @@
         grid.innerHTML = '';
 
         repos
-          .filter(repo => !repo.fork && repo.name !== `${username}.github.io`)
+          .filter(repo => !repo.fork && repo.name !== `${username}.github.io` && repo.name !== username)
           .forEach(repo => {
             const card = document.createElement('div');
             card.className = 'card';
